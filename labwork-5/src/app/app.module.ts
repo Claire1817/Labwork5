@@ -1,3 +1,4 @@
+import { AuthService } from './../providers/auth-service/auth-service';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -11,8 +12,7 @@ import { FirebaseProvider } from '../providers/firebase/firebase';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -20,8 +20,7 @@ import { FirebaseProvider } from '../providers/firebase/firebase';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   providers: [
     StatusBar,
