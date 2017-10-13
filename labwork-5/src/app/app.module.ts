@@ -12,6 +12,7 @@ import { HttpModule } from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from './../providers/firebase/firebase';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDHXPOevL35ZPZx25lrrhMTeMgpmlRv3Bs",
@@ -33,6 +34,7 @@ var firebaseConfig = {
     HttpModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
