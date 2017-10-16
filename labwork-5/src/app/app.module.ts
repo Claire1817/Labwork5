@@ -6,9 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { AuthService } from '../providers/auth-service/auth-service';
-import { AboutPage } from '../pages/about/about';
-import { TabsPage } from '../pages/tabs/tabs';
+import { TodolistPage } from '../pages/todolist/todolist';
+
 
 import { HttpModule } from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -29,8 +28,7 @@ var firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
-    AboutPage,
-    TabsPage
+    TodolistPage
   ],
   imports: [
     BrowserModule,
@@ -44,15 +42,13 @@ var firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-    AboutPage,
-    TabsPage
+    TodolistPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     FirebaseProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthService,
     FirebaseProvider
   ]
 })
