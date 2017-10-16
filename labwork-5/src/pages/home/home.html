@@ -1,16 +1,24 @@
 <ion-header>
   <ion-navbar>
+          <ion-buttons start>
+            <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          </ion-buttons>
     <ion-title>
       PIZZA MAKER
     </ion-title>
   </ion-navbar>
 </ion-header>
+<ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
 
 <ion-content padding>
   Choose your pizza : 
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
-  <button ion-button class="submit-btn" full type="submit" (click)="goToDoList()">Login</button>
+  <button ion-button class="submit-btn" full type="submit" (click)="goToDoList()">todolist</button>
 
 </ion-content>
