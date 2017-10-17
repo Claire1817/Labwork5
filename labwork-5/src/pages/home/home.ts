@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ToastController, IonicPage, NavParams } from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
 import {AngularFireAuth} from 'angularfire2/auth';
 
 @Component({
@@ -11,13 +11,12 @@ export class HomePage {
 
   constructor(private afAuth: AngularFireAuth, public navCtrl: NavController, private toast: ToastController) {
   }
-  public goToDoList() {
-    this.navCtrl.push('TodolistPage');
-  }
+
+  rootPage = "TabsPage";  
 
   ionViewWillLoad(){
    this.afAuth.authState.subscribe(data => {
-    if (data.email && data.uid) {
+    if (data && data.email && data.uid) {
       this.toast.create({
          message:'Welcome to APP_NAME, ${data.email}',
          duration: 3000
@@ -28,8 +27,10 @@ export class HomePage {
         duration: 3000
        }).present();
     }
-    
   });  
   }
 
+  public goToDoList(){
+    this.navCtrl.push('TodolistPage');
+  }
 }
