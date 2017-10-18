@@ -16,7 +16,7 @@ export class FirebaseProvider {
   constructor(public afd: AngularFireDatabase) { }
 
   getShoppingItems() {
-    return this.afd.list('/shoppingItems/');
+    return this.afd.list('shoppingItems').valueChanges();
   }
  
   addItem(name) {

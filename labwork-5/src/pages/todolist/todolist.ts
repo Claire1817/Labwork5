@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
 import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
+import { Item } from '../../models/item';
 
 @IonicPage()
 @Component({
@@ -12,17 +13,34 @@ import { Observable } from 'rxjs/Observable';
 export class TodolistPage {
   shoppingItems: Observable<any[]>;
   newItem = '';
+  result: Item[];
  
   constructor(public db: AngularFireDatabase, public firebaseProvider: FirebaseProvider) {
-    this.shoppingItems = this.db.list('shoppingItems').valueChanges();;
-  }
+    this.shoppingItems = this.db.list('shoppingItems').valueChanges()
+    this.shoppingItems.subscribe(result => console.log(result));
+
+    this.shoppingItems.subscribe(result => 
+      console.log(this.result = result)
+    
+    );
+/* 
+      this.shoppingItems.subscribe(
+       items => {
+        items.forEach(snapshot => {
+         console.log("aaaaaa");
+          console.log(snapshot.name, snapshot.key);
+        console.log("aaaaaa");
+        });
+      }); */
+    }
  
-  
-  addItem() {
+   addItem() {
     this.firebaseProvider.addItem(this.newItem);
   }
  
   removeItem(id) {
+    console.log("IDDDD");
+    console.log(id);
     this.firebaseProvider.removeItem(id);
   }
 }

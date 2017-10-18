@@ -21,42 +21,48 @@ export class MenuPage {
 
   /** Adding code tabs */
 
-rootPage="TabsPage";
-
 @ViewChild(Nav) nav: Nav;
 
 pages: PageInterface[] = [
-  { title: 'Home', pageName: 'TabsPage', tabComponent: 'ServicePage', index: 0, icon: 'home'},
-  { title: 'Contact', pageName: 'TabsPage', tabComponent: 'ContactsPage', index: 1, icon: 'contacts'},
-  { title: 'Special', pageName: 'SpecialPage', icon: 'home'},
+  { title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'home'},
+  { title: 'About', pageName: 'TabsPage', tabComponent: 'AboutPage', index: 1, icon: 'contacts'},
+  { title: 'TodoList', pageName: 'TodolistPage', icon: 'home'},
 ]
+activePage: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.activePage = this.pages[0];
   }
-  openPage(page: PageInterface){
-    let params ={};
 
-    if(page.index){
-    params = {tabIndex: page.index};
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad MenuPage');
+  }
+
+/**
+ * Adding code for Tab
+ */
+  rootPage = "TabsPage";
+  openPage(page: PageInterface) {
+    let params = {};
+
+    if (page.index) {
+      params = {tabIndex: page.index};
     }
-if(this.nav.getActiveChildNav() && page.index != undefined) {
-  this.nav.getActiveChildNav().select(page.index);
-}else {
-  this.nav.setRoot(page.pageName, params);
-}
+    if (this.nav.getActiveChildNav && page.index != undefined) {     
+      this.nav.getActiveChildNav().select(page.index);
+      this.activePage = page;       
+    } else {
+      this.nav.setRoot(page.pageName, params);
+      this.activePage = page;  
+    }
   }
-isActive(page: PageInterface){
-  let childNav = this.nav.getActiveChildNav();
 
-  if(childNav){
-    if(childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
+  isActive(page: PageInterface) {
+    if (page === this.activePage) {
       return 'primary';
+    } else {
+      return ;
     }
-    return;
   }
-if (this.nav.getActive() && this.nav.getActive().name === page.pageName) {
-  return 'primary';
-}
-  }
-
 }
 

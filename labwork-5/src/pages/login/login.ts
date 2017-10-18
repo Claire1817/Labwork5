@@ -13,7 +13,10 @@ export class LoginPage {
 
   user = {} as User;
 
-  constructor(private afAuth: AngularFireAuth, private nav: NavController, public navParams: NavParams) { }
+  
+  constructor(private afAuth: AngularFireAuth, private nav: NavController, public navParams: NavParams) {
+ //   this.nav.setRoot(LoginPage);
+   }
  
   public createAccount() {
     this.nav.push('RegisterPage');
