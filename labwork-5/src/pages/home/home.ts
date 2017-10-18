@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
 import {AngularFireAuth} from 'angularfire2/auth';
 
+/**
+ * Claire Gizard -- 1106363
+ */
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'

@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule, IonicPage } from 'ionic-angular';
+import { IonicPageModule } from 'ionic-angular';
 import { TabsPage } from './tabs';
+
+/**
+ * Claire Gizard -- 1106363
+ */
 
 @NgModule({
   declarations: [

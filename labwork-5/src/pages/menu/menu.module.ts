@@ -2,7 +2,11 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { MenuPage } from './menu';
 
-@NgModule({
+/**
+ * Claire Gizard -- 1106363
+ */
+
+ @NgModule({
   declarations: [
     MenuPage,
   ],

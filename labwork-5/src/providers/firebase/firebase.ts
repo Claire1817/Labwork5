@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { AngularFireDatabase, AngularFireList } from "angularfire2/database"; 
+import { AngularFireDatabase } from "angularfire2/database"; 
 
 import 'rxjs/add/operator/map';
-
+/**
+ * Claire Gizard -- 1106363
+ */
 /*
   Generated class for the FirebaseProvider provider.
 
@@ -24,6 +25,6 @@ export class FirebaseProvider {
   }
  
   removeItem(id) {
-    this.afd.list('/shoppingItems/').remove(id);
+    this.afd.list('shoppingItems/').remove(id);
   }
 }

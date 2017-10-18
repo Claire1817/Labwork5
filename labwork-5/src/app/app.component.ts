@@ -3,7 +3,9 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-
+/**
+ * Claire Gizard -- 1106363
+ */
  
 @Component({
   templateUrl: 'app.html'

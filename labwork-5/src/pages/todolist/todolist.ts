@@ -1,15 +1,20 @@
 import { FirebaseProvider } from './../../providers/firebase/firebase';
 import { Component } from '@angular/core';
-import { NavController, IonicPage } from 'ionic-angular';
-import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
+import { IonicPage } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 import { Item } from '../../models/item';
+
+/**
+ * Claire Gizard -- 1106363
+ */
 
 @IonicPage()
 @Component({
   selector: 'page-todolist',
   templateUrl: 'todolist.html'
 })
+
 export class TodolistPage {
   shoppingItems: Observable<any[]>;
   newItem = '';

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule, IonicPage } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
@@ -21,6 +21,10 @@ var firebaseConfig = {
   storageBucket: "labwork5-bfcb8.appspot.com",
   messagingSenderId: "625626025533"
 };
+
+/**
+ * Claire Gizard -- 1106363
+ */
 
 @NgModule({
   declarations: [

@@ -2,8 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 
 /**
-* adding interface
+ * Claire Gizard -- 1106363
  */
+
 export interface PageInterface {
   title: string;
   pageName: string;
@@ -18,8 +19,6 @@ export interface PageInterface {
   templateUrl: 'menu.html',
 })
 export class MenuPage {
-
-  /** Adding code tabs */
 
 @ViewChild(Nav) nav: Nav;
 
