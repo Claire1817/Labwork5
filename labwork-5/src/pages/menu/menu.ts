@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 
 /**
  * Claire Gizard -- 1106363
+ * Pierre Munin -- 1106420
  */
 
 export interface PageInterface {

@@ -4,6 +4,7 @@ import { TabsPage } from './tabs';
 
 /**
  * Claire Gizard -- 1106363
+ * Pierre Munin -- 1106420
  */
 
 @NgModule({
