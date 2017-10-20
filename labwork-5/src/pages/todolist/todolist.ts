@@ -1,8 +1,7 @@
 import { FirebaseProvider } from './../../providers/firebase/firebase';
 import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database-deprecated';
 import { Item } from '../../models/item';
 
 /**
@@ -17,28 +16,19 @@ import { Item } from '../../models/item';
 })
 
 export class TodolistPage {
-  shoppingItems: Observable<any[]>;
+  shoppingItems: FirebaseListObservable<any[]>;
   newItem = '';
   result: Item[];
  
   constructor(public db: AngularFireDatabase, public firebaseProvider: FirebaseProvider) {
-    this.shoppingItems = this.db.list('shoppingItems').valueChanges()
-    this.shoppingItems.subscribe(result => console.log(result));
+    this.shoppingItems = this.firebaseProvider.getShoppingItems();
+    // this.shoppingItems = this.db.list('/shoppingItems/');
+//    this.shoppingItems.subscribe(result => console.log(result));
 
-    this.shoppingItems.subscribe(result => 
+/*     this.shoppingItems.subscribe(result => 
       console.log(this.result = result)
-    
     );
-/* 
-      this.shoppingItems.subscribe(
-       items => {
-        items.forEach(snapshot => {
-         console.log("aaaaaa");
-          console.log(snapshot.name, snapshot.key);
-        console.log("aaaaaa");
-        });
-      }); */
-    }
+ */    }
  
    addItem() {
     this.firebaseProvider.addItem(this.newItem);
