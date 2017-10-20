@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, IonicPage } from 'ionic-angular';
+import { NavController, IonicPage, ToastController } from 'ionic-angular';
 import { User } from '../../models/user';
 import { AngularFireAuth } from 'angularfire2/auth' 
 import { HomePage } from '../home/home';
@@ -18,7 +18,7 @@ export class RegisterPage {
 
   user= {} as User; 
  
-  constructor(private aFAuth: AngularFireAuth, private nav: NavController) { }
+  constructor(private aFAuth: AngularFireAuth, private nav: NavController, private toast: ToastController) { }
  
   async register(user: User) {
     
@@ -28,6 +28,10 @@ export class RegisterPage {
     console.log(result);
   } 
     catch(e) {
+      this.toast.create({
+        message: 'Error:',
+        duration: 3000
+       }).present();
       console.log(e);
     }
   }

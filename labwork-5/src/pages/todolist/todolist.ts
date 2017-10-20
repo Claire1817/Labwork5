@@ -22,13 +22,7 @@ export class TodolistPage {
  
   constructor(public db: AngularFireDatabase, public firebaseProvider: FirebaseProvider) {
     this.shoppingItems = this.firebaseProvider.getShoppingItems();
-    // this.shoppingItems = this.db.list('/shoppingItems/');
-//    this.shoppingItems.subscribe(result => console.log(result));
-
-/*     this.shoppingItems.subscribe(result => 
-      console.log(this.result = result)
-    );
- */    }
+    }
  
    addItem() {
     this.firebaseProvider.addItem(this.newItem);

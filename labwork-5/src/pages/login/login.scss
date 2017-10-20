@@ -5,7 +5,7 @@
 page-login {
     
      .login-content {
-       background: hsla(199, 75%, 76%, 0.99);
+       background: hsla(198, 72%, 83%, 0.99);
     
        .logo-row {
          padding-top: 50px;
@@ -39,15 +39,32 @@ page-login {
         }
     
         .submit-btn {
-          background: rgb(206, 103, 103);
+          background: hsla(198, 19%, 43%, 0.99);
           border-radius: 30px !important;
           border: 1px solid #FFFFFF;
+          margin-top: 14px;
+          color: #363636;
         }
-    
+
+        .input {
+          background: hsla(198, 25%, 92%, 0.99);
+          border: 0.5px solid #EFEFEF
+        }
+
         .register-btn {
           color: #363636;
           font-size: 0.8em;
         }
+
+        .element {    
+          height: 100%;
+          vertical-align: middle;
+        }
+
+        .vertical-align-content {
+             display: flex!important;
+             align-content: center!important;
+             align-items: center!important;
+        }
      }
-    
    }
