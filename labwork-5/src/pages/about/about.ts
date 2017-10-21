@@ -16,21 +16,8 @@ export class AboutPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   
-  public gotoHome(){
-    this.navCtrl.push('HomePage');
-  }
- 
-  public goToDoList(){
-    this.navCtrl.push('TodolistPage');
-}
- 
-  public goAbout(){
-    this.navCtrl.push('AboutPage');
-  }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad AboutPage');
   }
-
 }
 
