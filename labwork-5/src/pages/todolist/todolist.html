@@ -3,10 +3,7 @@
 -->
 
 <ion-header>
-  <ion-navbar color="primary">
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-      </button>
+  <ion-navbar color="dark">
     <ion-title>
      TodoList Page
     </ion-title>
@@ -14,6 +11,13 @@
 </ion-header>
  
 <ion-content>
+
+  
+        <button ion-button class="submit-btn" color="default" full type="submit" (click)="gotoHome()">Home</button>
+    <button ion-button class="submit-btn" color="light" full type="submit">Todolist</button>
+   <button ion-button class="submit-btn" color="default" full type="submit" (click)="goAbout()">About</button>
+
+
   <ion-row>
     <ion-col col-9>
       <ion-item>

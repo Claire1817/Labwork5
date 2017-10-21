@@ -3,14 +3,7 @@
 -->
 <ion-header>
   <ion-navbar>
-      <ion-buttons start>
-        <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-        </button>
-      </ion-buttons>
-    
-    
-      <ion-title>Home Page</ion-title>
+    <ion-title>Home Page</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -22,6 +15,13 @@
   <p>
     Welcome in our application ! :) You can add tasks in the todolist !
   </p>
-  <button ion-button class="submit-btn" full type="submit" (click)="goToDoList()">Todolist</button>
+  
 
+      <button ion-button class="submit-btn" color="light" full type="submit"><ion-icon name="home"></ion-icon> Home </button>
+ 
+      
+<button ion-button class="submit-btn" color="default" full type="submit" (click)="goToDoList()">Todolist</button>
+  <button ion-button class="submit-btn" color="default" full type="submit" (click)="goAbout()">About</button>
+ 
+  
 </ion-content>

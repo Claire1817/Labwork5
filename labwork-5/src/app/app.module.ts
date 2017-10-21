@@ -4,11 +4,12 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 import { HttpModule } from '@angular/http';
-import { AngularFireDatabaseModule, FirebaseListObservable } from 'angularfire2/database-deprecated';
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from './../providers/firebase/firebase';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -26,6 +27,7 @@ var firebaseConfig = {
  * Claire Gizard -- 1106363
  * Pierre Munin -- 1106420
  */
+
 
 @NgModule({
   declarations: [
@@ -54,3 +56,4 @@ var firebaseConfig = {
   ]
 })
 export class AppModule {}
+

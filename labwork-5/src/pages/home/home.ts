@@ -17,7 +17,18 @@ export class HomePage {
   constructor(private afAuth: AngularFireAuth, public navCtrl: NavController, private toast: ToastController) {
   }
 
-  rootPage = "TabsPage";  
+  public gotoHome(){
+    this.navCtrl.push('HomePage');
+  }
+ 
+  public goToDoList(){
+    this.navCtrl.push('TodolistPage');
+}
+ 
+  public goAbout(){
+    this.navCtrl.push('AboutPage');
+  }
+  rootPage = "LoginPage";  
 
   ionViewWillLoad(){
    this.afAuth.authState.subscribe(data => {
@@ -33,9 +44,5 @@ export class HomePage {
        }).present();
     }
   });  
-  }
-
-  public goToDoList(){
-    this.navCtrl.push('TodolistPage');
   }
 }

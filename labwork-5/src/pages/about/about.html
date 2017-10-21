@@ -5,9 +5,7 @@
     
    <ion-navbar>
     <ion-buttons start>
-      <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+  
     </ion-buttons>
 
     <ion-title>Contact Us !</ion-title>
@@ -18,5 +16,10 @@
  
  <ion-content padding>
  
+  
+    <button ion-button class="submit-btn" color="default" full type="submit" (click)="gotoHome()">Home</button>
+<button ion-button class="submit-btn" color="default" full type="submit" (click)="goToDoList()">Todolist</button>
+<button ion-button class="submit-btn" color="light" full type="submit">About</button>
+
  </ion-content>
  

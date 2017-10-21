@@ -6,7 +6,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Pierre Munin -- 1106420
  */
 
-@IonicPage()
+@IonicPage(
+  {
+    name: 'page-tabs'
+  }
+  )
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html',
